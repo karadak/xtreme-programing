@@ -15,11 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author Karadak
  */
-public class InicioTest {
+public class LogInTest {
     
-    public InicioTest() {
-        
-        System.out.println("Se inician los componentes Graficos");
+    public LogInTest() {
     }
 
     @BeforeClass
@@ -39,13 +37,17 @@ public class InicioTest {
     }
 
     /**
-     * Test of main method, of class Inicio.
+     * Test of validarIngreso method, of class LogIn.
      */
-    @Test
-    public void testMain() {
-        System.out.println("El main se ejecuto");
-        String[] args = null;
-        Inicio.main(args);
+    @Test    
+    public void testValidarIngreso() {
+        System.out.println("validarIngreso");
+        String password = "admin";
+        String Usuario = "adminX";
+        LogIn instance = new LogIn();
+        boolean expResult = true;
+        boolean result = instance.validarIngreso(password, Usuario);
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }

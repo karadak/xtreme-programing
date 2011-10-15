@@ -10,12 +10,9 @@
  */
 package IDE;
 
-import java.util.ArrayList;
-import javax.swing.UnsupportedLookAndFeelException;
-
 /**
  *
- * @author Karadak
+ * @author Nelson Reyes
  */
 
 /**
@@ -27,11 +24,12 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class Inicio extends javax.swing.JFrame {
 
-    ArrayList<String> nombres = new ArrayList(); 
+   
     
     /** Creates new form Inicio */
     public Inicio() {
-        initComponents();
+        
+        initComponents();        
     }
 
     /** This method is called from within the constructor to
@@ -43,72 +41,209 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Login = new javax.swing.JFrame();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        usuario = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        password = new javax.swing.JPasswordField();
+        ingresar_aplicacion = new javax.swing.JButton();
+        informacion = new javax.swing.JLabel();
         Ventana1 = new javax.swing.JButton();
         Ventana2 = new javax.swing.JButton();
+        Facturar = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        menu_nuevo = new javax.swing.JMenuItem();
+        menu_salir = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+
+        Login.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Login.setTitle("Login - Xtreme Programming");
+        Login.setBounds(new java.awt.Rectangle(420, 200, 400, 240));
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Login"));
+
+        jLabel1.setText("Usuario:");
+
+        jLabel2.setText("Contraseña:");
+
+        password.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                passwordKeyPressed(evt);
+            }
+        });
+
+        ingresar_aplicacion.setText("Ingresar");
+        ingresar_aplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ingresar_aplicacionActionPerformed(evt);
+            }
+        });
+
+        informacion.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        informacion.setForeground(new java.awt.Color(204, 0, 0));
+        informacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel1))
+                                .addGap(27, 27, 27)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(password)
+                                    .addComponent(usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)))
+                            .addComponent(informacion, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(ingresar_aplicacion)
+                        .addGap(43, 43, 43))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ingresar_aplicacion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(informacion, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout LoginLayout = new javax.swing.GroupLayout(Login.getContentPane());
+        Login.getContentPane().setLayout(LoginLayout);
+        LoginLayout.setHorizontalGroup(
+            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LoginLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+        LoginLayout.setVerticalGroup(
+            LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LoginLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(118, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Inicial");
         setBounds(new java.awt.Rectangle(400, 200, 0, 0));
+        setName("Inicio"); // NOI18N
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
 
-        Ventana1.setText("Ventana1");
+        Ventana1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/comprar.png"))); // NOI18N
+        Ventana1.setText("Comprar");
         Ventana1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ventana1ActionPerformed(evt);
             }
         });
 
-        Ventana2.setText("Ventana 2");
+        Ventana2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/verificar.png"))); // NOI18N
+        Ventana2.setText("Verificar");
         Ventana2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Ventana2ActionPerformed(evt);
             }
         });
 
+        Facturar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/factura.png"))); // NOI18N
+        Facturar.setText("Facturar");
+        Facturar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        Facturar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FacturarActionPerformed(evt);
+            }
+        });
+
+        jMenu1.setText("Archivo");
+
+        menu_nuevo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        menu_nuevo.setText("Nuevo");
+        menu_nuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_nuevoActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menu_nuevo);
+
+        menu_salir.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
+        menu_salir.setText("Salir");
+        menu_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_salirActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menu_salir);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Ayuda");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(50, 50, 50)
                 .addComponent(Ventana1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(Ventana2)
-                .addGap(85, 85, 85))
+                .addGap(41, 41, 41))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(Facturar)
+                .addContainerGap(140, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ventana1)
-                    .addComponent(Ventana2))
-                .addContainerGap(195, Short.MAX_VALUE))
+                    .addComponent(Ventana2)
+                    .addComponent(Ventana1))
+                .addGap(44, 44, 44)
+                .addComponent(Facturar)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    public String llenar_Array(String nombre)
-    {
-        nombres.add(nombre);
-        
-        return nombres.get(nombres.size()-1);
-       
-    }
-    
-    public int tamaño_array()
-    {
-        return nombres.size();
-    }
+    /*
+     * Boton que envia a la funcionalidad 2 : Carretilla de compras
+     */
     private void Ventana1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ventana1ActionPerformed
         System.out.println("Me tiene que enviar ala ventana con una funcionalidad X");
     }//GEN-LAST:event_Ventana1ActionPerformed
 
+    /*
+     * boton que me envia a la funcionalidad 3 : hacer compras
+     */
     private void Ventana2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ventana2ActionPerformed
          System.out.println("Me tiene que enviar ala ventana con una funcionalidad Y");
     }//GEN-LAST:event_Ventana2ActionPerformed
@@ -117,11 +252,85 @@ public class Inicio extends javax.swing.JFrame {
      * 
      * al abrirse la aplicacion mostrara la ventana de login
      */
-    
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
        
+       this.setVisible(false);          // ocultamos la ventana principal
+       this.Login.setVisible(true);     // mostramos la ventana de login
+        
     }//GEN-LAST:event_formWindowOpened
 
+    /*
+     * boton que me envia al menu principal de la aplicacion si me logeo correctamente
+     */    
+    private void ingresar_aplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresar_aplicacionActionPerformed
+               
+        comprobar_usuario();      // Comprobamos datos
+    }//GEN-LAST:event_ingresar_aplicacionActionPerformed
+
+    /*
+     * Item de la barra de menis para sali
+     */
+    private void menu_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_salirActionPerformed
+        System.exit(0); // cierra la aplicacion
+    }//GEN-LAST:event_menu_salirActionPerformed
+
+    /*
+     * Item de la barra de menis para abirir una nueva ventaa
+     */
+    private void menu_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_nuevoActionPerformed
+        
+        new Inicio().setVisible(true);  // una nueva ventana
+        this.dispose();                 // cerramos la ventana actual
+    }//GEN-LAST:event_menu_nuevoActionPerformed
+
+    /*
+     * evento que verifica si presiono la tecla enter
+     */
+    private void passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyPressed
+        
+       
+        if(evt.getKeyCode() == 10)      // tecla enter presionada
+        {
+            comprobar_usuario();        // Comprobamos datos
+        }
+    }//GEN-LAST:event_passwordKeyPressed
+
+    /*
+     * boton que me envia a la ventana de factura
+     */
+    
+    private void FacturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FacturarActionPerformed
+        System.out.println("Me tiene que enviar ala ventana con una funcionalidad Z");
+    }//GEN-LAST:event_FacturarActionPerformed
+ 
+    /*
+     * metodo local para comprobar el acceso del usuario a la aplicacion
+     */
+    private void comprobar_usuario()
+    {
+        String usuario_t = this.usuario.getText();              // obtiene el nombre de usuario del JText
+        String password_t = this.password.getText();               // obtiene el password del usuario del JText
+        
+        LogIn ingresar = new LogIn();                           // creamos un objeto de la clase LogIn
+        
+        boolean respuesta = false;                              // inicializamos la bandera de entrada
+        
+        respuesta = ingresar.validarIngreso(password_t, usuario_t); // obtenemos el resultado de la comparacion
+            
+        if(respuesta == true)                                   // si es verdadero el login
+        {
+            this.Login.dispose();                               // cerramos la ventana de login
+            this.setVisible(true);                              // mostramos el menu principal
+        }
+        else                                                    // si no es correcta la informacion
+        {   
+            informacion.setText("Vuelva a intentar...");        // mostramos mensaje al usuario
+            this.password.setText("");                          // iniciamos los campos de entrada
+            this.usuario.setText("");
+        }
+        
+       
+    }
     /**
      * @param args the command line arguments
      */
@@ -137,13 +346,28 @@ public class Inicio extends javax.swing.JFrame {
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
 
+            @Override
             public void run() {
                 new Inicio().setVisible(true);
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Facturar;
+    private javax.swing.JFrame Login;
     private javax.swing.JButton Ventana1;
     private javax.swing.JButton Ventana2;
+    private javax.swing.JLabel informacion;
+    private javax.swing.JButton ingresar_aplicacion;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem menu_nuevo;
+    private javax.swing.JMenuItem menu_salir;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }
