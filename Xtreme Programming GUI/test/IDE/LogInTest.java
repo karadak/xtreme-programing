@@ -41,14 +41,21 @@ public class LogInTest {
      */
     @Test    
     public void testValidarIngreso() {
-        System.out.println("validarIngreso");
-        String password = "admin";
-        String Usuario = "adminX";
-        LogIn instance = new LogIn();
-        boolean expResult = true;
-        boolean result = instance.validarIngreso(password, Usuario);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        System.out.println("Metodo que valida el ingreso de un Usuario");
+        
+        String password = "admin";          // password por default | si se cambia uno de estos valores la prueba falla
+        String Usuario = "admin";           // usuario por default  | si se cambia uno de estos valores la prueba falla
+        LogIn instancia = new LogIn();      // instancia de la clase que verifica el logeo
+        boolean expResult = true;           // valor que se espera del resultado, si es verdadero habilita la ventana principal
+        
+        
+        boolean resultado = false;
+        System.out.println("Se enviaron los parametros: "+password + " | "+Usuario);
+        
+        resultado = instancia.validarIngreso(password, Usuario); // enviamos los datos a la clase que verifica
+        System.out.println("resultado de la comprobacion: "+resultado);
+        
+        assertEquals(expResult, resultado);    // compramos el resultado
+   
     }
 }
