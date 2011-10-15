@@ -10,14 +10,25 @@
  */
 package IDE;
 
+import java.util.ArrayList;
 import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
  * @author Karadak
  */
+
+/**
+ * Aplicacion para la simulacion de la metodologia
+ * Xtreme Programming
+ * del Curso de Analisis y Diseño de Sistemas 1
+ * 
+ */
+
 public class Inicio extends javax.swing.JFrame {
 
+    ArrayList<String> nombres = new ArrayList(); 
+    
     /** Creates new form Inicio */
     public Inicio() {
         initComponents();
@@ -77,6 +88,18 @@ public class Inicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public String llenar_Array(String nombre)
+    {
+        nombres.add(nombre);
+        
+        return nombres.get(nombres.size()-1);
+       
+    }
+    
+    public int tamaño_array()
+    {
+        return nombres.size();
+    }
     private void Ventana1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ventana1ActionPerformed
         System.out.println("Me tiene que enviar ala ventana con una funcionalidad X");
     }//GEN-LAST:event_Ventana1ActionPerformed
