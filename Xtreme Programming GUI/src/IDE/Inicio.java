@@ -49,6 +49,11 @@ public class Inicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Inicial");
         setBounds(new java.awt.Rectangle(400, 200, 0, 0));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         Ventana1.setText("Ventana1");
         Ventana1.addActionListener(new java.awt.event.ActionListener() {
@@ -109,6 +114,15 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_Ventana2ActionPerformed
 
     /**
+     * 
+     * al abrirse la aplicacion mostrara la ventana de login
+     */
+    
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+       
+    }//GEN-LAST:event_formWindowOpened
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) 
@@ -117,7 +131,7 @@ public class Inicio extends javax.swing.JFrame {
         {           
             javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
         }
-        catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e)
+        catch (Exception e)
         {
             System.out.println("ERROR en LOOK & FEEL"+e);
         }
