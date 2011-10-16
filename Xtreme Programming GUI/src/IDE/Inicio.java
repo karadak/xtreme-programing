@@ -10,6 +10,7 @@
  */
 package IDE;
 
+
 import javax.swing.JTable;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -236,7 +237,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -299,7 +300,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(compraLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -351,7 +352,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(jButton3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton4)))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -364,7 +365,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jMenu5.setText("Archivo");
@@ -486,7 +487,7 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(142, 142, 142)
                 .addComponent(Facturar)
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -507,7 +508,7 @@ public class Inicio extends javax.swing.JFrame {
      */
     private void Ventana1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ventana1ActionPerformed
         System.out.println("Me tiene que enviar ala ventana con una funcionalidad X");
-        this.compra.setBounds(50, 50, 700, 200);
+        this.compra.setBounds(150, 150, 700, 300);
         this.compra.setVisible(true);
 
    
@@ -532,7 +533,7 @@ this.jTable1.setModel(modelo);
      */
     private void Ventana2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ventana2ActionPerformed
          System.out.println("Me tiene que enviar ala ventana con una funcionalidad Y");
-         this.verificar_carrito.setBounds(50, 50, 700, 700);
+         this.verificar_carrito.setBounds(150, 150, 700, 400);
          this.verificar_carrito.setVisible(true);
          this.jTable2.setModel(modelo);
          
@@ -590,7 +591,9 @@ this.jTable1.setModel(modelo);
      */
     
     private void FacturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FacturarActionPerformed
-        System.out.println("Me tiene que enviar ala ventana con una funcionalidad Z");
+        //System.out.println("Me tiene que enviar ala ventana con una funcionalidad Z");
+        imprimir_fac fac = new imprimir_fac();
+       fac.setVisible(true);
     }//GEN-LAST:event_FacturarActionPerformed
 
     private void menu_nuevo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_nuevo1ActionPerformed
@@ -665,6 +668,7 @@ this.jTable1.setModel(modelo);
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+       this.compra.setBounds(150, 150, 700, 300);
         this.compra.setVisible(true);
         this.verificar_carrito.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
