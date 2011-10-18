@@ -39,6 +39,7 @@ public class LogInTest {
     /**
      * Test of validarIngreso method, of class LogIn.
      */
+    
     @Test    
     public void testValidarIngreso() {
         System.out.println("Metodo que valida el ingreso de un Usuario");
