@@ -7,11 +7,16 @@ package IDE;
 /**
  *
  * @author Nelson Reyes
+ * 
  */
 public class LogIn 
 {
-    /*
-     * verifica el passeword del usuario
+    
+    /**
+     * 
+     * @param clave
+     * @return 
+     * Metodo que comprueba el password
      */
     private boolean comprobarPassword(String clave)
     {
@@ -27,8 +32,11 @@ public class LogIn
         
     }
     
-    /*
-     * Verifica el nombre de usuario
+    /**
+     * 
+     * @param usuario
+     * @return 
+     * Metodo que comprueba el nombre de usuario
      */
     private boolean comprobarUsuario(String usuario)
     {
@@ -44,10 +52,14 @@ public class LogIn
         return respuesta;            
         
     }
-    
-    /*
+   /**
+     * 
+     * @param password
+     * @param Usuario
+     * @return 
      * valida el ingreso
      * si el password y usuario coinciden
+     *
      */
     protected boolean validarIngreso(String password, String Usuario)
     {

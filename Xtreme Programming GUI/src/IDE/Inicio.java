@@ -12,12 +12,7 @@ package IDE;
 
 
 import javax.swing.JTable;
-import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -68,8 +63,8 @@ public class Inicio extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox();
         jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Agregar_al_carrito = new javax.swing.JButton();
+        Aceptar_compra = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         menu_nuevo1 = new javax.swing.JMenuItem();
@@ -202,17 +197,17 @@ public class Inicio extends javax.swing.JFrame {
 
         jLabel4.setText("Cantidad:");
 
-        jButton1.setText("Agregar al Carrito");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Agregar_al_carrito.setText("Agregar al Carrito");
+        Agregar_al_carrito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Agregar_al_carritoActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Aceptar Compra");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Aceptar_compra.setText("Aceptar Compra");
+        Aceptar_compra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                Aceptar_compraActionPerformed(evt);
             }
         });
 
@@ -226,7 +221,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Aceptar_compra, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -236,7 +231,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1)))
+                        .addComponent(Agregar_al_carrito)))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -247,7 +242,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(Agregar_al_carrito)
                     .addComponent(jLabel4))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -255,7 +250,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Aceptar_compra, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -503,32 +498,27 @@ public class Inicio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    /*
+    /**
      * Boton que envia a la funcionalidad 2 : Carretilla de compras
      */
     private void Ventana1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ventana1ActionPerformed
+        
         System.out.println("Me tiene que enviar ala ventana con una funcionalidad X");
         this.compra.setBounds(150, 150, 700, 300);
         this.compra.setVisible(true);
 
    
 
-modelo.addColumn("Producto");
-modelo.addColumn("Cantidad a Comprar");
-modelo.addColumn("Precio");
+        modelo.addColumn("Producto");
+        modelo.addColumn("Cantidad a Comprar");
+        modelo.addColumn("Precio");
 
-//Object [] fila = new Object[5];
-//fila[0] = "Refrigeradora";
-//fila[1] = "5";
-//fila[2] = "Q1500.00";
-//fila[3] = boton;
-//modelo.addRow(fila);
 
-this.jTable1.setModel(modelo);
+        this.jTable1.setModel(modelo);
 
     }//GEN-LAST:event_Ventana1ActionPerformed
 
-    /*
+    /**
      * boton que me envia a la funcionalidad 3 : hacer compras
      */
     private void Ventana2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ventana2ActionPerformed
@@ -545,12 +535,16 @@ this.jTable1.setModel(modelo);
      */
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
        
+     /**
+     * 
+     * al abrirse la aplicacion mostrara la ventana de login
+     **/
        this.setVisible(false);          // ocultamos la ventana principal
        this.Login.setVisible(true);     // mostramos la ventana de login
         
     }//GEN-LAST:event_formWindowOpened
 
-    /*
+    /**
      * boton que me envia al menu principal de la aplicacion si me logeo correctamente
      */    
     private void ingresar_aplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresar_aplicacionActionPerformed
@@ -558,15 +552,15 @@ this.jTable1.setModel(modelo);
         comprobar_usuario();      // Comprobamos datos
     }//GEN-LAST:event_ingresar_aplicacionActionPerformed
 
-    /*
-     * Item de la barra de menis para sali
+    /**
+     * Item de la barra de menus para salir
      */
     private void menu_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_salirActionPerformed
         System.exit(0); // cierra la aplicacion
     }//GEN-LAST:event_menu_salirActionPerformed
 
-    /*
-     * Item de la barra de menis para abirir una nueva ventaa
+    /**
+     * Item de la barra de menus para abrir una nueva ventana
      */
     private void menu_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_nuevoActionPerformed
         
@@ -574,7 +568,7 @@ this.jTable1.setModel(modelo);
         this.dispose();                 // cerramos la ventana actual
     }//GEN-LAST:event_menu_nuevoActionPerformed
 
-    /*
+    /**
      * evento que verifica si presiono la tecla enter
      */
     private void passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyPressed
@@ -586,13 +580,13 @@ this.jTable1.setModel(modelo);
         }
     }//GEN-LAST:event_passwordKeyPressed
 
-    /*
+    /**
      * boton que me envia a la ventana de factura
-     */
+     */   
     
     private void FacturarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FacturarActionPerformed
-        //System.out.println("Me tiene que enviar ala ventana con una funcionalidad Z");
-        imprimir_fac fac = new imprimir_fac();
+
+       imprimir_fac fac = new imprimir_fac();
        fac.setVisible(true);
     }//GEN-LAST:event_FacturarActionPerformed
 
@@ -602,51 +596,65 @@ this.jTable1.setModel(modelo);
         this.compra.setVisible(false);
     }//GEN-LAST:event_menu_nuevo1ActionPerformed
 
+    /**
+     * 
+     * @param evt , boton salir
+     */
     private void menu_salir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_salir1ActionPerformed
         // TODO add your handling code here:
          System.exit(0);
     }//GEN-LAST:event_menu_salir1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-             String producto = this.jComboBox1.getSelectedItem().toString();
-//jTable1.setModel(null);
-        if(producto.equalsIgnoreCase("Refrigerador")){
-        Object [] fila = new Object[5];
-fila[0] = "Refrigeradora";
-fila[1] = this.jTextField1.getText();
-fila[2] = "Q4000.00";
+    /**
+     * 
+     * @param evt Agregar al carrito
+     */
+    private void Agregar_al_carritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Agregar_al_carritoActionPerformed
+    
+        String producto = this.jComboBox1.getSelectedItem().toString();
+     
+        //jTable1.setModel(null);
+        if(producto.equalsIgnoreCase("Refrigerador"))
+        {
+            Object [] fila = new Object[5];
+            fila[0] = "Refrigeradora";
+            fila[1] = this.jTextField1.getText();
+            fila[2] = "Q4000.00";
 
-modelo.addRow(fila);
-this.jTable1.setModel(modelo);
-
+            modelo.addRow(fila);
+            this.jTable1.setModel(modelo);
         }
 
-        if(producto.equalsIgnoreCase("Estufa")){
-        Object [] fila = new Object[5];
-fila[0] = "Estufa";
-fila[1] = this.jTextField1.getText();
-fila[2] = "Q3250.00";
-modelo.addRow(fila);
-this.jTable1.setModel(modelo);
-
+        if(producto.equalsIgnoreCase("Estufa"))
+        {
+            Object [] fila = new Object[5];
+            fila[0] = "Estufa";
+            fila[1] = this.jTextField1.getText();
+            fila[2] = "Q3250.00";
+            modelo.addRow(fila);
+            this.jTable1.setModel(modelo);
         }
 
-        if(producto.equalsIgnoreCase("Lavadora")){
-        Object [] fila = new Object[5];
-fila[0] = "Lavadora";
-fila[1] = this.jTextField1.getText();
-fila[2] = "Q3000.00";
-modelo.addRow(fila);
-this.jTable1.setModel(modelo);
+        if(producto.equalsIgnoreCase("Lavadora"))
+        {
+            Object [] fila = new Object[5];
+            fila[0] = "Lavadora";
+            fila[1] = this.jTextField1.getText();
+            fila[2] = "Q3000.00";
+            modelo.addRow(fila);
+            this.jTable1.setModel(modelo);
 
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_Agregar_al_carritoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+    /**
+     * 
+     * @param evt , aceptar compra
+     */
+    private void Aceptar_compraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Aceptar_compraActionPerformed
+       
         this.compra.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_Aceptar_compraActionPerformed
 
     private void menu_nuevo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_nuevo2ActionPerformed
         // TODO add your handling code here:
@@ -656,6 +664,10 @@ this.jTable1.setModel(modelo);
         // TODO add your handling code here:
     }//GEN-LAST:event_menu_salir2ActionPerformed
 
+    /**
+     * 
+     * @param evt se elimina el item seleccionado de la tabla
+     */
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
         // TODO add your handling code here:
          int fila = jTable2.rowAtPoint(evt.getPoint());
@@ -666,6 +678,10 @@ this.jTable1.setModel(modelo);
             JOptionPane.showMessageDialog(jTable2, "Se elimino el producto seleccionado de su carrito de compras");
     }//GEN-LAST:event_jTable2MouseClicked
 
+    /**
+     * 
+     * @param evt 
+     */
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
        this.compra.setBounds(150, 150, 700, 300);
@@ -673,12 +689,17 @@ this.jTable1.setModel(modelo);
         this.verificar_carrito.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     * Confirmacion de la compra
+     */
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(jTable2, "SU compra se realizo exitosamente!!");
     }//GEN-LAST:event_jButton4ActionPerformed
  
-    /*
+    /**
      * metodo local para comprobar el acceso del usuario a la aplicacion
      */
     private void comprobar_usuario()
@@ -707,7 +728,7 @@ this.jTable1.setModel(modelo);
        
     }
     /**
-     * @param args the command line arguments
+     * @param args main, programa principal
      */
     public static void main(String args[]) 
     {
@@ -728,6 +749,8 @@ this.jTable1.setModel(modelo);
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Aceptar_compra;
+    private javax.swing.JButton Agregar_al_carrito;
     private javax.swing.JButton Facturar;
     private javax.swing.JFrame Login;
     private javax.swing.JButton Ventana1;
@@ -735,8 +758,6 @@ this.jTable1.setModel(modelo);
     private javax.swing.JFrame compra;
     private javax.swing.JLabel informacion;
     private javax.swing.JButton ingresar_aplicacion;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JComboBox jComboBox1;
